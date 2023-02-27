@@ -1,7 +1,9 @@
 import { useState } from "react";
 
 const InputTodo = ({addTodoItem}) => {
-  const [title, setTitle] = useState("Add Todo...");
+  const [title, setTitle] = useState("");
+  const [message, setMessage] = useState('');
+
   const handleChange = (e) => {
     setTitle(e.target.value);
   }
@@ -11,15 +13,19 @@ const InputTodo = ({addTodoItem}) => {
     if (title.trim()) {
       addTodoItem(title);
       setTitle('');
+      setMessage('')
     } else {
-      alert('Please add item');
+      setMessage('Please add item');
     }
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" placeholder="Add todo..." value={title} onChange={handleChange} /> <br/>
-      <button type="submit">Submit</button>
+    <>
+    <form onSubmit={handleSubmit} className="form-container">
+      <input className="input-text" type="text" placeholder="Add todo..." value={title} onChange={handleChange} />
+      <button type="submit" className="input-submit">Submit</button>
     </form>
+    <span className="submit-warning">{message}</span>
+    </>
   );
 }
 
