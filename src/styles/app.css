@@ -16,6 +16,24 @@ body {
   width: 100%;
   padding: 8rem 20px 3rem;
 }
+
+.nav-ul {
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
+}
+
+.nav-item {
+  list-style: none;
+  padding: 6px;
+  font-size: 20px;
+}
+
+.wrapper {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
 .todos {
   max-width: 580px;
   margin: 0 auto;
@@ -57,4 +75,14 @@ body {
   color: red;
   margin-top: 5px;
   display: block;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Active route */
+.active {
+  color: #8a4baf;
 }
