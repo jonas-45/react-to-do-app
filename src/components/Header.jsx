@@ -1,5 +1,4 @@
-import styles from "@/styles/Header.module.css";
-
+import styles from '@/styles/Header.module.css';
 
 const Header = () => {
   const headerStyle = {
@@ -14,6 +13,6 @@ const Header = () => {
       <p>Items will persist in the browser local storage</p>
     </header>
   );
-}
+};
 
 export default Header;
